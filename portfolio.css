@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+    background: url("img/dark-triangles.webp");
+    color: white;
+    font-family: "Poppins";
+}
+
+.flex, .cta{
+    display: flex;
+}
+
+/* Enter header css */
+.flex.header{
+    height: 95vh;
+    width: 85%;
+    margin: auto auto;
+    align-items: center;
+}
+/* End of header css */
+
+/* Header writeup css */
+.follow{
+    gap: 5%;
+    align-items: center;
+    margin-top: -10%;
+    transform: translateY(-370%);
+}
+.contact{
+    transform: translateY(410%);
+}
+.writeup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 50%;
+    line-height: 150%;
+}
+.writeup h4{
+    font-size: 110%;
+}
+.writeup h1{
+    font-size: 500%;
+}
+.writeup div span{
+    color: #8685EF;
+}
+.cta{
+    gap: 3%;
+}
+.cta a{
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+    border-radius: 4px;
+    padding: 2%;
+}
+.download{
+    background-color: #8685EF !important;
+}
+.work{
+    position: relative;
+}
+.work:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    animation: workPulse 1s infinite;
+}
+/* End of header writeup css */
+
+/* Header image css */
+.image{
+    gap: 5rem;
+    flex-direction: column;
+}
+
+.image div{
+    overflow: hidden;
+}
+.image div img{
+    margin-left: 50%;
+    width: 45%;
+    border-radius: 10000px;
+}
+
+.image div img.second{
+    margin-left: 1%;
+}
+.first_image{
+    margin-top: 3.9%;
+    animation: img_move1 3s infinite alternate;
+}
+.second_image{
+    animation: img_move2 3s infinite alternate;
+}
+/* End of header image css */
+
+/* Header contact css */
+a.flex{
+    gap: -1rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 2%;
+    outline: 1px solid transparent;
+    border: none;
+    border-radius: 4px;
+    transition: 200ms ease;
+}
+a.flex:hover{
+    outline: 2px solid #8685EF;
+}
+.flex.contact{
+    gap: 3%;
+}
+.flex.contact .flex div img{
+    width: 85%;
+}
+.titin{
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 90%;
+}
+.title{
+    font-size: 80%;
+    margin-top: -5%;
+}
+.info{
+    font-size: 60%;
+}
+/* End of header contact css */
+
+@keyframes img_move1 {
+
+    100%{
+        transform: translateY(125%);
+    }
+}
+@keyframes img_move2 {
+
+    100%{
+        transform: translateY(-125%);
+    }
+}
+
+@keyframes workPulse {
+    0%{
+        opacity: 1;
+        outline: 2px solid #fff;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.15);
+        outline: 3px solid #fff;
+    }
+}
+@media screen and (max-width: 1247px){
+    .writeup h1{
+        font-size: 400%;
+        line-height: 115%;
+    }
+    .flex.contact{
+        gap: 9%;
+    }
+    .flex.contact .flex{
+        gap: 8%;
+    }
+    .flex.contact .flex div img{
+        width: 1.5rem;
+    }
+}
+@media screen and (max-width: 1247px){
+    .writeup h1{
+        font-size: 360%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .flex.header{
+        flex-direction: column;
+    }
+    .follow, .flex.contact{
+        display: none;
+    }
+    .flex.image{
+        margin-top: 3rem;
+    }
+    .writeup{
+        margin-top: 3rem;
+        text-align: center;
+    }
+    .writeup h1{
+        text-align: center;
+        font-size: 300%;
+        line-height: 115%;
+        margin-bottom: 3rem;
+    }
+    .writeup h4{
+        margin-bottom: 3.5rem;
+    }
+    .writeup h5{
+        line-height: 155%;
+        margin-bottom: 4rem;
+    }
+    .first_image{
+        transform: translateY(-7%);
+        animation: img_move11 3s infinite alternate;
+    }
+    .second_image{
+        transform: translateY(-75%);
+        animation: img_move22 3s infinite alternate;
+    }
+    .cta{
+        gap: 4%;
+        transform: scale(1.5);
+        font-size: 60%;
+        padding: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+    @keyframes img_move11 {
+
+        100%{
+            transform: translateY(79%);
+        }
+    }
+    @keyframes img_move22 {
+    
+        100%{
+            transform: translateY(-160%);
+        }
+    }
+}
+@media screen and (max-width: 768.5px) {
+    .flex.image{
+        margin-top: 3rem;
+    }
+    .writeup{
+        margin-top: 3rem;
+        text-align: center;
+    }
+    .writeup h1{
+        font-size: 130%;
+        margin-bottom: 5rem;
+        transform: scale(2.2);
+    }
+    .writeup h4{
+        margin-bottom: 5rem;
+        transform: scale(1.2);
+    }
+    .writeup h5{
+        margin-bottom: 6rem;
+        transform: scale(1.1);
+
+    }
+    .first_image{
+        transform: translateY(-7%);
+        animation: img_move1111 3s infinite alternate;
+    }
+    .second_image{
+        transform: translateY(-80%);
+        animation: img_move2222 3s infinite alternate;
+    }
+    .cta{
+        margin-top: 5rem;
+        transform: scale(1.7);
+    }
+    @keyframes img_move1111 {
+
+        100%{
+            transform: translateY(50%);
+        }
+    }
+    @keyframes img_move2222 {
+    
+        100%{
+            transform: translateY(-135%);
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .flex.image{
+        margin-top: 3rem;
+    }
+    .writeup{
+        margin-top: 2.7rem;
+    }
+    .writeup h1{
+        margin-bottom: 4rem;
+        font-size: 150%;
+        transform: scale(1.7);
+    }
+    .writeup h4{
+        font-size: 80%;
+        margin-bottom: 3.5rem;
+    }
+    .writeup h5{
+        font-size: 65%;
+        margin-bottom: 3rem;
+    }
+    .first_image{
+        transform: translateY(-7%);
+        animation: img_move111 3s infinite alternate;
+    }
+    .second_image{
+        transform: translateY(-105%);
+        animation: img_move222 3s infinite alternate;
+    }
+    .cta{
+        gap: 4%;
+        transform: scale(1.5);
+        font-size: 50%;
+        padding: 2%;
+    }
+    @keyframes img_move111 {
+
+        100%{
+            transform: translateY(50%);
+        }
+    }
+    @keyframes img_move222 {
+    
+        100%{
+            transform: translateY(-170%);
+        }
+    }
+}
